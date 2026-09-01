@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=crim
+GenericName=Video trimmer and cropper
+Comment=Crop and trim videos with a live ffmpeg command
+Exec=crim %f
+Icon=crim
+Terminal=false
+Categories=AudioVideo;Video;AudioVideoEditing;
+MimeType=video/mp4;video/x-matroska;video/quicktime;video/webm;video/x-msvideo;video/mpeg;
+# Must match the app id set in main.rs, otherwise Wayland shows no icon.
+StartupWMClass=crim

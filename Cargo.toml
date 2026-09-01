@@ -1,0 +1,31 @@
+[package]
+name = "crim"
+version = "0.2.0"
+edition = "2021"
+description = "crim — crop & trim videos with a live ffmpeg command"
+license = "MIT"
+
+[dependencies]
+# GUI: egui (immediate mode) + eframe (window/GL backend). Pure Rust, cross-platform.
+eframe = { version = "0.29", default-features = false, features = [
+    "default_fonts", # embed a UI font so we don't depend on system fonts
+    "glow",          # OpenGL backend, the most portable eframe renderer
+    "wayland",       # Linux: Wayland support
+    "x11",           # Linux: X11 support
+] }
+egui = "0.29"
+
+# PNG decoding of the still frames produced by ffmpeg.
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+# Native "open file" / "save as" dialogs.
+rfd = "0.15"
+
+# Parsing of `ffprobe -print_format json` output.
+serde_json = "1"
+
+# Splitting the (user-editable) ffmpeg command line into argv, honouring quotes.
+shell-words = "1"
+
+[profile.release]
+opt-level = 2

@@ -1,0 +1,10 @@
+- name of file could go over the upper buttons
+- red time cursor ball can go over the start time text
+- the trim handles are difficult to click if the time cursor is near
+- trim handles should move only by clicking on them (no clickable area above and below)
+- audio should have icon
+- the text of the ffmpeg command should be scrollable and have to stay in the textbox
+- the texts are going over other stuffs
+- the time cursor should only be moved if one click on the internal trim area or on the ball-line of the cursor
+- add rotation option (with angle if possible (-90,90,angle))
+- play preview should not move the time cursor and start from the trim start and stop at the trim end
